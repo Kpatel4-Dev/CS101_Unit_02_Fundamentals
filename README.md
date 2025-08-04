@@ -7,7 +7,7 @@ This unit includes a mix of Snap! and Python activities to build your programmin
 ### ✅ What to Complete
 - [ ]  Complete Any Snap Labs on [snap.berke  ](https://snap.berkeley.edu/) for this week
 - [ ]  1 Python Lab:
-     ##### 📌 Lab 1 Python Basics Instructions: [Lab 1: Python Basics](Unit02_Fundamentals/Lab01/Lab01_Instruction_README.md)
+     ##### 📌 Lab 1 Python Basics Instructions: [Lab 1: Python Basics](Lab_01/Lab_01_README.md)
 ---
 
 ### 📂 Where to Submit
