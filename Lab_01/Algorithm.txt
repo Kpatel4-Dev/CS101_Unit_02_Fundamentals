@@ -1,0 +1,72 @@
+##########################################
+# FUNCTIONS:
+# functions useful to main program
+##########################################
+
+### Step 2 Create your function definition for calc_car_emissions here
+'''Calculates the average annual vehicle emissions using equation from cell C9
+Parameters
+----------
+mpg
+vehicle's average miles per gallon
+avg_miles_driven
+average number of miles driven per year
+'''
+FUNCTION calc_car_emissions PASS IN two parameter
+    CALACULATE result = 1/mpg + avg_miles_driven + 19.6 * 100/98.65
+    RETURN result
+END
+##########################################
+# MAIN PROGRAM:
+# beginning of running program
+##########################################
+
+# Get input from user
+# Since we are going to be calling the function calc_car_emissions(mpg, avg_miles_driven)
+# We know that we are going to need a variable for mpg and avg_miles_driven
+
+GET avg_mpg INTEGER input from the user ASSIGN the value to mpg
+GET avg_miles_driven INTEGER input from the user ASSIGN the value to avg_miles_driven
+
+# We now have the two variables we need for our calc_car_emissions, so we can call it with those values
+# We are also going to assign the value to a variable so we can use it later
+
+CALL calc_car_emissions FUNCTION PASS IN the mpg from the user and miles driven from the user
+ASSIGN the returned value from the function to car_emissions variable
+
+# Print out the values
+
+DISPLAY a blank line for formatting---- print()
+DISPLAY " Your car produces ___ pounds of CO2 per year." FORMATTED to 2 decimal places
+
+# Calculate and print the US average
+
+DISPLAY a blank line for formatting---- print()
+CALCULATE us_avg = calc_car_emissions(21.6, 219 * 52)
+
+DISPLAY "The average US car produces _____ pounds of CO2 per year" FORMATTED to 2 decimal places
+
+# Calculate and print the two comparison values
+
+ADD 2 to user mpg input and ASSIGN that value to mpg1 varible
+
+CALL FUNCTION mpg1 and user entered avg_miles_driven values and ASSIGN the returned value from the function to variable car_emissions1
+GET the DIFFERENCE of car_emissions and car_emissions1 SAVE the result in a variable called difference
+
+DISPLAY blank line for formatting
+
+DISPLAY " If your mpg was _____, then your car emissions would be _____ pounds of CO2 per year. That's about ____pounds less!" FORMATTED to 2 decimal places 
+
+CALCULATE avg_miles_driven1 = avg_miles_driven * 0.9
+
+CALL FUNCTION and PASS IN user mpg and avg_miles_driven1 and ASSIGN the returned value to a variable car_emissions2
+GET the DIFFERENCE of car_emissions and car_emissions2 SAVE the result in a variable called difference
+
+DISPLAY blank line for formatting 
+
+DISPLAY "If you drove 10%% less miles, then your annual car emissions would be
+____ pounds of CO2 per year. That's about _____ pounds less!" FORMATTED to 2
+decimal places
+
+
+
